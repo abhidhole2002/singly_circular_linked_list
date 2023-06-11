@@ -3,16 +3,14 @@ using namespace std;
 
 class slist
 {
+    //int data;
+    //slist* head;
+    //slist* next;
+
+    public:
     int data;
     slist* head;
     slist* next;
-
-    public:
-    
-    /*int data;
-    slist* head;
-    slist* next;*/
-    
     slist(int data)
     {
         this->data = data;
@@ -106,11 +104,9 @@ int main()
     obj.add_at_any(5,100);
     obj.print();
 
-    cout<<endl<<"HEAD = "<<obj.gethead()->getdata()<<endl;  // if data haad and next is in private section then we need to define getdata function for accessing data ;
-    cout<<"TAIL = "<<obj.gettail()->getdata()<<endl;
-    
-    
-    cout<<endl<<"HEAD = "<<obj.gethead()->data<<endl;  // if data head and next is in public section then we can access data by -> directly
+    //cout<<endl<<"HEAD = "<<obj.gethead()->getdata()<<endl;
+    //cout<<"TAIL = "<<obj.gettail()->getdata()<<endl;
+    cout<<endl<<"HEAD = "<<obj.gethead().data<<endl;
     cout<<"TAIL = "<<obj.gettail()->data<<endl;
 
 }
